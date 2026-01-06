@@ -1,0 +1,2507 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.15.1",
+        "pyPiVersion" : "2.1.7"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/updated_iterator",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "validation_mapping",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "34673",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "finchdavidprophecyioteam.premiertestupdateversion.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "validationRulesCatalog",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "validationRulesSchema",
+          "kind" : {
+            "type" : "string",
+            "value" : "premier_val_map"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "validationRulesTable",
+          "kind" : {
+            "type" : "string",
+            "value" : "validation_rules"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "validationOutputCatalog",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "validationOutputSchema",
+          "kind" : {
+            "type" : "string",
+            "value" : "premier_val_map"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "validationOutputTable",
+          "kind" : {
+            "type" : "string",
+            "value" : "validation_output"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "validateTableIterator",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "validationRulesCatalog",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "validationRulesSchema",
+              "kind" : {
+                "type" : "string",
+                "value" : "premier_val_map"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "validationRulesTable",
+              "kind" : {
+                "type" : "string",
+                "value" : "validation_rules"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "validationOutputCatalog",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "validationOutputSchema",
+              "kind" : {
+                "type" : "string",
+                "value" : "premier_val_map"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "validationOutputTable",
+              "kind" : {
+                "type" : "string",
+                "value" : "validation_output"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "source_catalog",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "source_schema",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "source_table",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "table_key",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "validation_run_id",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "validation_timestamp",
+              "kind" : {
+                "type" : "timestamp",
+                "value" : "01-01-1970T00:00:00"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "source_columns",
+              "kind" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "value" : [ ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "validations",
+              "kind" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "cols",
+                    "kind" : {
+                      "type" : "array",
+                      "elementType" : {
+                        "type" : "string",
+                        "value" : null
+                      },
+                      "value" : null
+                    },
+                    "optional" : false,
+                    "isWorkflowNodeConfiguration" : false,
+                    "isReferenced" : false
+                  }, {
+                    "name" : "logic",
+                    "kind" : {
+                      "type" : "string",
+                      "value" : null
+                    },
+                    "optional" : false,
+                    "isWorkflowNodeConfiguration" : false,
+                    "isReferenced" : false
+                  } ]
+                },
+                "value" : [ ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "validationRulesCatalog",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "validationRulesSchema",
+            "kind" : {
+              "type" : "string",
+              "value" : "premier_val_map"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "validationRulesTable",
+            "kind" : {
+              "type" : "string",
+              "value" : "validation_rules"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "validationOutputCatalog",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "validationOutputSchema",
+            "kind" : {
+              "type" : "string",
+              "value" : "premier_val_map"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "validationOutputTable",
+            "kind" : {
+              "type" : "string",
+              "value" : "validation_output"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : {
+            "validationRulesCatalog" : "dfinch",
+            "validationRulesSchema" : "premier_val_map",
+            "validationRulesTable" : "validation_rules",
+            "validationOutputCatalog" : "dfinch",
+            "validationOutputSchema" : "premier_val_map",
+            "validationOutputTable" : "validation_output"
+          }
+        }
+      }
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Selective",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "validation_mapping",
+    "configTopLevelPackage" : "validation_mapping",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "TjrnRT48y0LQ4QGFqKZR_",
+    "source" : "5DjjLRALC3RaGhLT_NqFR$$JafgsVGgfrqplKwxkb7qM",
+    "sourcePort" : "Bg1KzEsBVz858BFxlwPZ8$$ofJqy8YeF_IaaDwRl3gJn",
+    "target" : "wSlTUTPO60oNFaD7JJJXm$$WSLmWTv7qDxMYx5AACMRf",
+    "targetPort" : "IKtnuFd2cW-LDU5wz3RNg$$2nIonzygl8LNhEqYp_vHC"
+  }, {
+    "id" : "HG_c4gUsNXp11a05j-WdJ",
+    "source" : "wSlTUTPO60oNFaD7JJJXm$$WSLmWTv7qDxMYx5AACMRf",
+    "sourcePort" : "wXjLJtWZSAwpZBZgWqzXX$$8p_B6w6fCWZ0qg23r-PGO",
+    "target" : "RlV-DQk1VxayJI5EIvY2j$$U4bHBv6FKXUaYNKG7jcoJ",
+    "targetPort" : "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX"
+  }, {
+    "id" : "gNKv_NVfWJXmon-tj-Wu-",
+    "source" : "RlV-DQk1VxayJI5EIvY2j$$U4bHBv6FKXUaYNKG7jcoJ",
+    "sourcePort" : "-FRKVOoiSy8cz9kA9y9Hp$$fB411Q7ar-7DYP5hOvPtr",
+    "target" : "TpUk1EV9V6g05sVoTYx2o$$oCUDIj9IUUk_bQT7DQ2xZ",
+    "targetPort" : "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6"
+  }, {
+    "id" : "y_gacJ2C6_OwkzTJ_Lmaa$$ECC28yRLvyEeBbSnLTWGK",
+    "source" : "TpUk1EV9V6g05sVoTYx2o$$oCUDIj9IUUk_bQT7DQ2xZ",
+    "sourcePort" : "5EESIXcT15_Ye6ss7fBLH$$rGPe4ZIW1aFYIpowkYzig",
+    "target" : "AfQjCY8TLtcQul8-jCDxj$$0qErHHHNEKmZ9CiHgYmcP",
+    "targetPort" : "eKJMaflTy8bI4BimOuUPA$$dTDnaY0dkbw3AWo4pB1rv"
+  }, {
+    "id" : "TkOPV3ReeZnJGICJWr-N7",
+    "source" : "AfQjCY8TLtcQul8-jCDxj$$0qErHHHNEKmZ9CiHgYmcP",
+    "sourcePort" : "YOXcpQQVxYkGL6DkpJCR0$$ZDC-eMzgRMJwDOusMnGC1",
+    "target" : "x7D8myrujXWbt_c0QDC7K$$r-XuZoR1zMB2mqRbOSsJJ",
+    "targetPort" : "Zsv3bdg6hhSc4AfiI8njG$$PTwMMJJ6FCxKQMrVzwcBn"
+  } ],
+  "processes" : {
+    "x7D8myrujXWbt_c0QDC7K$$r-XuZoR1zMB2mqRbOSsJJ" : {
+      "id" : "x7D8myrujXWbt_c0QDC7K$$r-XuZoR1zMB2mqRbOSsJJ",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "validationOutput",
+        "slug" : "validationOutput",
+        "x" : 1020,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Stores validation results for future business analysis and reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Zsv3bdg6hhSc4AfiI8njG$$PTwMMJJ6FCxKQMrVzwcBn",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "validation_run_id",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_timestamp",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_result",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_logic",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "row_count",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_duration_ms",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/iterator_output"
+      }
+    },
+    "wSlTUTPO60oNFaD7JJJXm$$WSLmWTv7qDxMYx5AACMRf" : {
+      "id" : "wSlTUTPO60oNFaD7JJJXm$$WSLmWTv7qDxMYx5AACMRf",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "addMetadata",
+        "slug" : "addMetadata",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Enriches data with source details and unique validation identifiers for tracking and audit purposes.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "IKtnuFd2cW-LDU5wz3RNg$$2nIonzygl8LNhEqYp_vHC",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "logic",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "wXjLJtWZSAwpZBZgWqzXX$$8p_B6w6fCWZ0qg23r-PGO",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "logic",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "table_key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_run_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_timestamp",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "source_catalog",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_catalog"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_schema",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_schema"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_table",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_table"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_columns",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_columns"
+          },
+          "description" : ""
+        }, {
+          "target" : "logic",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "logic"
+          },
+          "description" : ""
+        }, {
+          "target" : "table_key",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat(source_catalog, '.', source_schema, '.', source_table)"
+          },
+          "description" : ""
+        }, {
+          "target" : "validation_run_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat('validation_run_', CAST(unix_timestamp(current_timestamp()) AS STRING))"
+          },
+          "description" : ""
+        }, {
+          "target" : "validation_timestamp",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "current_timestamp()"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "IKtnuFd2cW-LDU5wz3RNg$$2nIonzygl8LNhEqYp_vHC##source_catalog", "IKtnuFd2cW-LDU5wz3RNg$$2nIonzygl8LNhEqYp_vHC##source_table", "IKtnuFd2cW-LDU5wz3RNg$$2nIonzygl8LNhEqYp_vHC##source_columns", "IKtnuFd2cW-LDU5wz3RNg$$2nIonzygl8LNhEqYp_vHC##source_schema", "IKtnuFd2cW-LDU5wz3RNg$$2nIonzygl8LNhEqYp_vHC##logic" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "AfQjCY8TLtcQul8-jCDxj$$0qErHHHNEKmZ9CiHgYmcP" : {
+      "id" : "AfQjCY8TLtcQul8-jCDxj$$0qErHHHNEKmZ9CiHgYmcP",
+      "component" : "TableIterator",
+      "metadata" : {
+        "label" : "validateTableIterator",
+        "slug" : "validateTableIterator",
+        "x" : 820,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eKJMaflTy8bI4BimOuUPA$$dTDnaY0dkbw3AWo4pB1rv",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "table_key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_run_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_timestamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validations",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "cols",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "string",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "logic",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "YOXcpQQVxYkGL6DkpJCR0$$ZDC-eMzgRMJwDOusMnGC1",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "metagemProperty" : {
+          "availableColumnNames" : [ "source_catalog", "source_schema", "source_table", "table_key", "validation_run_id", "validation_timestamp", "source_columns", "validations" ],
+          "availableConfigFieldNames" : [ "validationRulesCatalog", "validationRulesSchema", "validationRulesTable", "validationOutputCatalog", "validationOutputSchema", "validationOutputTable", "source_catalog", "source_schema", "source_table", "table_key", "validation_run_id", "validation_timestamp", "source_columns", "validations" ],
+          "numberOfThreads" : "5",
+          "maxIteration" : "1000",
+          "parallelismEnabled" : false,
+          "configToColumnMap" : [ {
+            "configName" : "source_catalog",
+            "columnName" : "source_catalog"
+          }, {
+            "configName" : "source_schema",
+            "columnName" : "source_schema"
+          }, {
+            "configName" : "source_table",
+            "columnName" : "source_table"
+          }, {
+            "configName" : "table_key",
+            "columnName" : "table_key"
+          }, {
+            "configName" : "validation_run_id",
+            "columnName" : "validation_run_id"
+          }, {
+            "configName" : "validation_timestamp",
+            "columnName" : "validation_timestamp"
+          }, {
+            "configName" : "source_columns",
+            "columnName" : "source_columns"
+          }, {
+            "configName" : "validations",
+            "columnName" : "validations"
+          } ]
+        }
+      },
+      "connections" : [ {
+        "id" : "ATCN36R9F28Q9XJYJ29Oi",
+        "source" : "AfQjCY8TLtcQul8-jCDxj$$0qErHHHNEKmZ9CiHgYmcP",
+        "sourcePort" : "eKJMaflTy8bI4BimOuUPA$$dTDnaY0dkbw3AWo4pB1rv",
+        "target" : "bpk1DJSP3PUvP8PiKja7P$$NXDMUxeW30xqGqkVY79O4",
+        "targetPort" : "MfiQbaLjwjpio5iVM5GIQ$$_SwbpyTn1JnOWrAdQHE9q",
+        "visualProperty" : {
+          "isHidden" : true
+        }
+      }, {
+        "id" : "f_qysMrqzeCBa048SfO-l",
+        "source" : "7LnCuxjGXtjiVzycTX69f$$hopzjF15tpolCX6UqZBuL",
+        "sourcePort" : "IWjEEXA__KcbxC9vQJYI6$$It4AxQ11DNcs8UWvItCvV",
+        "target" : "Ettqs0pwjrkGipv-_ppw4$$ZTf0Y_Ho16nA41cJMWDaq",
+        "targetPort" : "lgd-tKYVmK8RNSP6m0EEZ$$MchMXpNdmQlOOd8-h_VSA"
+      }, {
+        "id" : "UdXkVNIN1Zev2Uoywc232",
+        "source" : "BN-yoBhdGOazyOQv0cHEt$$nURrJ0rVuXs4qJdwTLfb7",
+        "sourcePort" : "SI3jrBWtbmFBbyeTF56_V$$PyBxwqslxWNS-e4Wo9Bfj",
+        "target" : "7LnCuxjGXtjiVzycTX69f$$hopzjF15tpolCX6UqZBuL",
+        "targetPort" : "OAvjEvgmuvwQ4EhZ0Ntn_$$Dd0T5olczRwy4hAklkJ3c"
+      }, {
+        "id" : "VnE8TUlo8HTAC8I590Ehb$$k4FCGUj1vpbHr1dLvXXK4",
+        "source" : "xfrZM74S3evVJJPkFPBq3$$EyMYyLtOO9t4pDxM3taRf",
+        "sourcePort" : "wmXxKAvm8h6BhnKxdXvs1$$kOzKuF7w2QX2gUjqxLTYh",
+        "target" : "AfQjCY8TLtcQul8-jCDxj$$0qErHHHNEKmZ9CiHgYmcP",
+        "targetPort" : "YOXcpQQVxYkGL6DkpJCR0$$ZDC-eMzgRMJwDOusMnGC1",
+        "visualProperty" : {
+          "isHidden" : false
+        }
+      }, {
+        "id" : "bMrtGZbsMOf812y2rGGfz",
+        "source" : "Ettqs0pwjrkGipv-_ppw4$$ZTf0Y_Ho16nA41cJMWDaq",
+        "sourcePort" : "xYFO1b2xu9oEyvL4b-QUl$$PLsPpwBgAg7JBIiGMTbyS",
+        "target" : "xfrZM74S3evVJJPkFPBq3$$EyMYyLtOO9t4pDxM3taRf",
+        "targetPort" : "3qUKVk1iEiy4jdP8HnkIh$$jSEh0uJnADnUooK3of9vW",
+        "visualProperty" : {
+          "isHidden" : false
+        }
+      }, {
+        "id" : "SfXrUTsXjysTFHjszQXqw$$GvU3AcvmwxeqSfip1Eu5P",
+        "source" : "MSpKAd7DiCdbuSPghsZJB$$FLQgOA9khzRQyadwd9x1t",
+        "sourcePort" : "3lK5VBc-EPC-hyy-oUlcf$$wYQY42Dp3lGsmW4orK9YY",
+        "target" : "BN-yoBhdGOazyOQv0cHEt$$nURrJ0rVuXs4qJdwTLfb7",
+        "targetPort" : "TDiy7J1OuClXPGrFUrgB4$$7wTJyQzGnDHK4dAOx_POO"
+      } ],
+      "processes" : {
+        "MSpKAd7DiCdbuSPghsZJB$$FLQgOA9khzRQyadwd9x1t" : {
+          "id" : "MSpKAd7DiCdbuSPghsZJB$$FLQgOA9khzRQyadwd9x1t",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "source_table",
+            "slug" : "source_table",
+            "x" : 20,
+            "y" : 20,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "comment" : "Retrieves business data from a designated source table for further analysis or reporting.",
+            "autoUpdateComment" : true
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "3lK5VBc-EPC-hyy-oUlcf$$wYQY42Dp3lGsmW4orK9YY",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/validation_source"
+          }
+        },
+        "Ettqs0pwjrkGipv-_ppw4$$ZTf0Y_Ho16nA41cJMWDaq" : {
+          "id" : "Ettqs0pwjrkGipv-_ppw4$$ZTf0Y_Ho16nA41cJMWDaq",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "generateFinalSchema",
+            "slug" : "generateFinalSchema",
+            "x" : 620,
+            "y" : 20,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "comment" : "Creates a summary report of data validation activities, including details such as validation time, source, results, and processing duration.",
+            "autoUpdateComment" : true,
+            "dataPreview" : true,
+            "showRecordsCount" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "lgd-tKYVmK8RNSP6m0EEZ$$MchMXpNdmQlOOd8-h_VSA",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "source_columns",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_result",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_logic",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "row_count",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_duration_ms",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "xYFO1b2xu9oEyvL4b-QUl$$PLsPpwBgAg7JBIiGMTbyS",
+              "slug" : "out",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "validation_run_id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_timestamp",
+                  "type" : "timestamp",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_catalog",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_schema",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_table",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_result",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_logic",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "row_count",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_duration_ms",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : true
+          },
+          "properties" : {
+            "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+            "expressions" : [ {
+              "target" : "validation_run_id",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{validation_run_id}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "validation_timestamp",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{validation_timestamp}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "source_catalog",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{source_catalog}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "source_schema",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{source_schema}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "source_table",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{source_table}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "source_columns",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "source_columns"
+              },
+              "description" : ""
+            }, {
+              "target" : "validation_result",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "validation_result"
+              },
+              "description" : ""
+            }, {
+              "target" : "validation_logic",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "validation_logic"
+              },
+              "description" : ""
+            }, {
+              "target" : "row_count",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "row_count"
+              },
+              "description" : ""
+            }, {
+              "target" : "validation_duration_ms",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "validation_duration_ms"
+              },
+              "description" : ""
+            } ],
+            "importString" : "",
+            "activeTab" : "expressions",
+            "columnsSelector" : [ "lgd-tKYVmK8RNSP6m0EEZ$$MchMXpNdmQlOOd8-h_VSA##validation_logic", "lgd-tKYVmK8RNSP6m0EEZ$$MchMXpNdmQlOOd8-h_VSA##validation_result", "lgd-tKYVmK8RNSP6m0EEZ$$MchMXpNdmQlOOd8-h_VSA##validation_duration_ms", "lgd-tKYVmK8RNSP6m0EEZ$$MchMXpNdmQlOOd8-h_VSA##row_count", "lgd-tKYVmK8RNSP6m0EEZ$$MchMXpNdmQlOOd8-h_VSA##source_columns" ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "xfrZM74S3evVJJPkFPBq3$$EyMYyLtOO9t4pDxM3taRf" : {
+          "id" : "xfrZM74S3evVJJPkFPBq3$$EyMYyLtOO9t4pDxM3taRf",
+          "component" : "ControlFlowOutput",
+          "metadata" : {
+            "label" : "TableIterator_Output",
+            "slug" : "TableIterator_Output",
+            "x" : 980,
+            "y" : 20,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false,
+            "showRecordsCount" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "3qUKVk1iEiy4jdP8HnkIh$$jSEh0uJnADnUooK3of9vW",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "validation_run_id",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_timestamp",
+                  "type" : "timestamp",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_catalog",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_schema",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_table",
+                  "type" : "string",
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_result",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_logic",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "row_count",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_duration_ms",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "wmXxKAvm8h6BhnKxdXvs1$$kOzKuF7w2QX2gUjqxLTYh",
+              "slug" : "out0"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "minNumberOfInPorts" : 0,
+            "allowOutportAddDelete" : true,
+            "description" : "",
+            "allowInportAddDelete" : true,
+            "minNumberOfOutPorts" : 0,
+            "allowOutportRename" : true,
+            "allowInportRename" : true
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/ControlFlowOutput",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "7LnCuxjGXtjiVzycTX69f$$hopzjF15tpolCX6UqZBuL" : {
+          "id" : "7LnCuxjGXtjiVzycTX69f$$hopzjF15tpolCX6UqZBuL",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "validateTable",
+            "slug" : "validateTable",
+            "x" : 420,
+            "y" : 20,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "comment" : "Evaluates business rules on data, providing detailed results and performance metrics for each rule to support data quality and compliance monitoring.",
+            "autoUpdateComment" : true,
+            "dataPreview" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "OAvjEvgmuvwQ4EhZ0Ntn_$$Dd0T5olczRwy4hAklkJ3c",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "age",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "email",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "IWjEEXA__KcbxC9vQJYI6$$It4AxQ11DNcs8UWvItCvV",
+              "slug" : "out0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "source_columns",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_result",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_logic",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "row_count",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_duration_ms",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "script" : "from pyspark.sql.types import StructType, StructField, StringType, LongType, ArrayType\nfrom pyspark.sql.functions import expr\nimport time\n\nsource_df = in0\nresults = []\nrow_count = source_df.count()\n\nfor validation in Config.validations:\n    source_columns = validation.cols\n    logic = validation.logic\n    validation_start_time = time.time()\n\n    try:\n        # Execute the validation logic\n        result_df = source_df.select(expr(logic).alias('validation_result'))\n        result_value = result_df.collect()[0]['validation_result']\n        result_str = str(result_value) if result_value is not None else \"NULL\"\n    except Exception as e:\n        result_str = f'ERROR: {str(e)}'\n    finally:\n        validation_end_time = time.time()\n        validation_duration_ms = int((validation_end_time - validation_start_time) * 1000)\n\n    results.append({\n        'source_columns': source_columns,\n        'validation_result': result_str,\n        'validation_logic': logic,\n        'row_count': row_count,\n        'validation_duration_ms': validation_duration_ms\n    })\n\n# Output schema\nsimple_schema = StructType([\n    StructField('source_columns', ArrayType(StringType())),\n    StructField('validation_result', StringType()),\n    StructField('validation_logic', StringType()),\n    StructField('row_count', LongType()),\n    StructField('validation_duration_ms', LongType())\n])\n\nout0 = spark.createDataFrame(results, schema=simple_schema)",
+            "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+            "scriptMethodFooter" : "    return out0"
+          }
+        },
+        "BN-yoBhdGOazyOQv0cHEt$$nURrJ0rVuXs4qJdwTLfb7" : {
+          "id" : "BN-yoBhdGOazyOQv0cHEt$$nURrJ0rVuXs4qJdwTLfb7",
+          "component" : "Script",
+          "metadata" : {
+            "label" : "selectRequiredColumns",
+            "slug" : "selectRequiredColumns",
+            "x" : 220,
+            "y" : 20,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "comment" : "Selects only the business-relevant columns from the data, based on configurable requirements.",
+            "autoUpdateComment" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "TDiy7J1OuClXPGrFUrgB4$$7wTJyQzGnDHK4dAOx_POO",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier assigned to each individual in the dataset.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Full name of the individual.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "email",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Email address used for contacting the individual.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "age",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Age of the individual in years.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "city",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "City where the individual resides.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "SI3jrBWtbmFBbyeTF56_V$$PyBxwqslxWNS-e4Wo9Bfj",
+              "slug" : "out0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "id",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "age",
+                  "type" : "long",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "email",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : true,
+            "autoUpdateOnRun" : true
+          },
+          "properties" : {
+            "script" : "from pyspark.sql.functions import col\n\nsource_columns = Config.source_columns if hasattr(Config, 'source_columns') else None\n\nif not source_columns or len(source_columns) == 0:\n    return in0\n\nactual_columns = set(in0.columns)\ncolumns_to_select = [c for c in source_columns if c in actual_columns]\n\nif not columns_to_select:\n    return in0\n\nout0 = in0.select(*[col(c) for c in columns_to_select])",
+            "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+            "scriptMethodFooter" : "    return out0"
+          }
+        },
+        "bpk1DJSP3PUvP8PiKja7P$$NXDMUxeW30xqGqkVY79O4" : {
+          "id" : "bpk1DJSP3PUvP8PiKja7P$$NXDMUxeW30xqGqkVY79O4",
+          "component" : "ControlFlowInput",
+          "metadata" : {
+            "label" : "TableIterator_Input",
+            "slug" : "TableIterator_Input",
+            "x" : 0,
+            "y" : 0,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "visualProperty" : {
+              "isHidden" : true
+            }
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "MfiQbaLjwjpio5iVM5GIQ$$_SwbpyTn1JnOWrAdQHE9q",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "source_catalog",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_schema",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_table",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "table_key",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_run_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validation_timestamp",
+                  "type" : "timestamp",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "source_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "validations",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : {
+                      "type" : "struct",
+                      "fields" : [ {
+                        "name" : "cols",
+                        "type" : {
+                          "type" : "array",
+                          "elementType" : "string",
+                          "containsNull" : true
+                        },
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "logic",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      } ]
+                    },
+                    "containsNull" : false
+                  },
+                  "nullable" : false,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "minNumberOfInPorts" : 1,
+            "allowOutportAddDelete" : true,
+            "description" : "",
+            "allowInportAddDelete" : true,
+            "minNumberOfOutPorts" : 0,
+            "allowOutportRename" : true,
+            "allowInportRename" : true
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/ControlFlowInput",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/TableIterator",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "TpUk1EV9V6g05sVoTYx2o$$oCUDIj9IUUk_bQT7DQ2xZ" : {
+      "id" : "TpUk1EV9V6g05sVoTYx2o$$oCUDIj9IUUk_bQT7DQ2xZ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "extractRequiredColumns",
+        "slug" : "extractRequiredColumns",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts essential information about data sources and validation details, including unique columns involved in the validation process.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "table_key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_run_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_timestamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "array",
+                  "elementType" : "string",
+                  "containsNull" : true
+                },
+                "containsNull" : false
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validations",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "cols",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "string",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "logic",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "5EESIXcT15_Ye6ss7fBLH$$rGPe4ZIW1aFYIpowkYzig",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "table_key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_run_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_timestamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validations",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "cols",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "string",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "logic",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "source_catalog",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_catalog"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_schema",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_schema"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_table",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_table"
+          },
+          "description" : ""
+        }, {
+          "target" : "table_key",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "table_key"
+          },
+          "description" : ""
+        }, {
+          "target" : "validation_run_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "validation_run_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "validation_timestamp",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "validation_timestamp"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_columns",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ARRAY_DISTINCT(\n    FLATTEN(\n      TRANSFORM(\n        validations,\n        v -> v['cols']\n      )\n    )\n  )"
+          },
+          "description" : ""
+        }, {
+          "target" : "validations",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "validations"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6##validation_run_id", "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6##validation_timestamp", "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6##source_schema", "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6##table_key", "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6##source_catalog", "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6##source_table", "KELJajsOJHUrlO_9-tza-$$FXaz8EDdTRxAJj16vmxn6##validations" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "RlV-DQk1VxayJI5EIvY2j$$U4bHBv6FKXUaYNKG7jcoJ" : {
+      "id" : "RlV-DQk1VxayJI5EIvY2j$$U4bHBv6FKXUaYNKG7jcoJ",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "groupByTable",
+        "slug" : "groupByTable",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Summarizes validation activities for each data table, providing the latest validation details and associated rules.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "logic",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "table_key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_run_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_timestamp",
+              "type" : "timestamp",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "-FRKVOoiSy8cz9kA9y9Hp$$fB411Q7ar-7DYP5hOvPtr",
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "source_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "table_key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_run_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validation_timestamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "source_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "array",
+                  "elementType" : "string",
+                  "containsNull" : true
+                },
+                "containsNull" : false
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "validations",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "cols",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : "string",
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "logic",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : false
+              },
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "validation_run_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "max(validation_run_id)"
+          },
+          "description" : "",
+          "_row_id" : "FaDD08xeT4"
+        }, {
+          "target" : "validation_timestamp",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "max(validation_timestamp)"
+          },
+          "description" : "",
+          "_row_id" : "jqauTupl7U"
+        }, {
+          "target" : "source_columns",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "COLLECT_LIST(source_columns)"
+          },
+          "description" : "",
+          "_row_id" : "8knmcesZr7"
+        }, {
+          "target" : "validations",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "collect_list(struct(source_columns AS cols, logic AS logic))"
+          },
+          "description" : "",
+          "_row_id" : "RfPkkhp94s"
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "importString" : "",
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##source_columns", "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##table_key", "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##validation_timestamp", "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##validation_run_id", "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##source_table", "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##logic", "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##source_catalog", "8PuVDD7HNCnl7LQ4hXjz4$$4xa6pSwQ_jR0IzsWOfHoX##source_schema" ],
+        "groupBy" : [ {
+          "target" : "source_catalog",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_catalog"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "source_schema",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_schema"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "source_table",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "source_table"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "table_key",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "table_key"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.53&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "5DjjLRALC3RaGhLT_NqFR$$JafgsVGgfrqplKwxkb7qM" : {
+      "id" : "5DjjLRALC3RaGhLT_NqFR$$JafgsVGgfrqplKwxkb7qM",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "validationRules",
+        "slug" : "validationRules",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves business validation rules from a central repository for use in data quality checks.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Bg1KzEsBVz858BFxlwPZ8$$ofJqy8YeF_IaaDwRl3gJn",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/iterator_input"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
